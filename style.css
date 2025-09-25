@@ -1,17 +1,20 @@
 /* INTENTIONALLY UGLY STARTER STYLES */
 /* These styles are very, very ugly. */
 /* Time to make them attractive, legible, and usable */
-
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+
 
 :root
 {
+    --background-color: #DBDBDB;
+    --primary-font-color: #333333;
+    --secondary-font-color: #4D4D4D;
     font-family: 'Space Grotesk', sans-serif;
 }
 
 body {
-    font-family: 'Space Grotesk', sans-serif;
-    background-color: #DBDBDB;
+    background-color: var(--background-color);
     font-size: 10vmin;
     margin: 0;
     padding-top: 20vmax;
@@ -26,10 +29,16 @@ body {
     gap: 10vmin;
 }
 
-h1
+h1, h2, ul
 {
     padding: 0;
     margin: 0;
+}
+
+ol
+{
+    margin: 0;
+    padding-inline-start: 20px;
 }
 
 h2
@@ -43,6 +52,8 @@ li
     padding: 0;
     margin: 0;
 }
+
+
 
 .recipe-header
 {
@@ -80,7 +91,7 @@ li
 
 .recipe-title
 {
-    color: #333;
+    color: var(--primary-font-color);
     font-size: 4rem;
     font-weight: 500;
     line-height: 100%;
@@ -89,7 +100,7 @@ li
 
 .recipe-description
 {
-    color: #4D4D4D;
+    color: var(--secondary-font-color);
     font-size: 1.1rem;
     font-style: normal;
     font-weight: 300;
@@ -116,23 +127,23 @@ li
     justify-content: space-between;
     font-size: 0.8rem;
     font-weight: 400;
+    flex-wrap: wrap;
 }
 
 .meta-item
 {
-     /* flex: 1; */
+     flex: 1;
      display: flex;
      align-items: center;
      justify-content: center;
      flex-direction: column;
-     flex-wrap: wrap;
-     gap:10px;
+     gap:20px;
 }
 
 .meta-item img
 {
-    width: 100%;
-    height: 100%;  
+    width: 90%;
+    height: 90%;  
     object-fit: cover;    
     display: block; 
 }
@@ -141,7 +152,7 @@ li
 {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-direction: row;
     font-size: 1.5rem;
@@ -150,15 +161,25 @@ li
 
 .ingredients-section
 {
+    flex: 1;
+    width: 50%;
     font-size: 1.5rem;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
+    li 
+    {
+      list-style-type: none; 
+      padding: 0;    
+      margin: 0;  
+    }
 }
 
-.instruction-section
+.instructions-section
 {
+    flex: 1;
+    width: 50%;
     font-size: 1.5rem;
     display: flex;
     align-items: flex-start;
