@@ -11,26 +11,26 @@
     --primary-font-color: #333333;
     --secondary-font-color: #4D4D4D;
     font-family: 'Space Grotesk', sans-serif;
+    font-size: 2vmin;
 }
 
 body {
     background-color: var(--background-color);
-    font-size: 10vmin;
-    margin: 0;
-    padding-top: 20vmax;
-    padding-bottom: 20vmax;
+    margin-top: 5vmax;
+    margin-bottom: 5vmax;
     padding-left: 20vmax;
     padding-right: 20vmax;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: auto;
-    gap: 10vmin;
+    gap: 5vmax;
 }
 
 h1, h2, ul
 {
+
     padding: 0;
     margin: 0;
 }
@@ -72,7 +72,7 @@ li
     display: flex;
     align-items: center;
     justify-content: center;
-    height:280px;
+    height:18rem;
     img
     {
         height: 100%;
@@ -121,12 +121,12 @@ li
     padding: 0;
     margin: 0;
     /* gap: 5%; */
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 0.8rem;
     font-weight: 400;
+    width: 60vmax;
     flex-wrap: wrap;
 }
 
@@ -185,4 +185,72 @@ li
     align-items: flex-start;
     justify-content: space-between; 
     flex-direction: column;
+}
+
+
+@media (width<1300px) {
+
+    body
+    {
+        margin-top: 10vmax;
+        margin-bottom: 10vmax;
+        padding-left: 10vmin;
+        padding-right: 10vmin; 
+    }
+    .recipe-header
+    {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .recipe-title
+    {
+        font-size: 3.5rem;
+    }
+    .main-content
+    {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+@media (width<720px)
+{
+    :root
+    {
+        font-size:2vmax;
+    }
+    body
+    {
+        padding-left: 10vmin;
+        padding-right: 10vmin;
+    }
+    .cookieimage
+    {
+        height: 12rem;
+    }
+    .recipe-title
+    {
+        font-size: 3rem;
+    }
+    .recipe-meta
+    {
+        display: flex;
+        width: 88vmin;
+        /* padding: 152px 25px; */
+        align-items: center;
+        align-content: center;
+        gap: 10vmin;
+        flex-wrap: wrap;
+    }
+    .meta-item
+    {
+        height: 42vmin;
+        max-width: max-content;
+         flex: 1 1 42vmin; 
+    }
+    .ingredients-section, .instructions-section
+    {
+        width: 100%;
+    }
 }
